@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  tor-proxy:
+    build: .
+    restart: always
+    volumes:
+      - ./torrc.default:/etc/tor/torrc.default
+    ports:
+      - 9050:9050
+      - 9051:9051
